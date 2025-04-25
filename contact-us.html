@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us - Zamboanga del sur Tourist Spots</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Reset styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+   /* Background Image */
+  body {
+    line-height: 1.6;
+    color: #fff;
+    background: url('imgs/bg/BG2.jpg') no-repeat center/cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: 0.3s;
+  }
+  
+  .navbar a:hover {
+    background: #e67e22;
+    color: #000;
+  }
+
+    .logout-btn {
+      background: #e74c3c;
+      border-radius: 5px;
+    }
+
+    .logout-btn:hover {
+      background: #c0392b;
+    }
+
+    /* Contact Section */
+    .contact-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+      gap: 30px;
+    }
+
+    .contact-form, .contact-info {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: 0.3s;
+      width: 100%;
+    }
+
+    .contact-form:hover, .contact-info:hover {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+      font-size: 28px;
+      color: #000000;
+      margin-bottom: 20px;
+    }
+
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-form label {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .contact-form input, .contact-form textarea {
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      width: 100%;
+    }
+
+    .contact-form button {
+      padding: 12px;
+      background: #3498db;
+      color: rgb(0, 0, 0);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 18px;
+    }
+
+    .contact-form button:hover {
+      background: #2980b9;
+    }
+
+    .contact-info p {
+      font-size: 16px;
+      margin: 10px 0;
+      color: #000000;
+    }
+
+    .contact-info i {
+      color: #3498db;
+      margin-right: 10px;
+    }
+
+    /* Google Maps */
+    .map {
+      width: 100%;
+      height: 350px;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 40px 0;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      margin-top: 30px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 992px) {
+      .contact-container {
+        flex-direction: column;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<div class="navbar">
+  <a href="homepage.html">Home</a>
+  <a href="beaches.html">Beaches</a>
+  <a href="parks.html">Parks</a>
+  <a href="water-falls.html">Water Falls</a>
+  <a href="contact-us.html">Contact Us</a>
+  <a href="about-us.html">About Us</a>
+
+  
+</div>
+
+<!-- Contact Section -->
+<div class="contact-container">
+
+  <!-- Contact Form -->
+  <div class="contact-form">
+    <h2>Get in Touch</h2>
+    <form action="submit_form.php" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <!-- Contact Info -->
+  <div class="contact-info">
+    <h2>Contact Information</h2>
+    <p><i class="fas fa-map-marker-alt"></i> Zamboanga Del Sur, Philippines</p>
+    <p><i class="fas fa-phone"></i> +63 987 654 3210</p>
+    <p><i class="fas fa-envelope"></i> info@pkdtouristspots.com</p>
+    <p><i class="fas fa-clock"></i> Mon-Fri: 9:00 AM - 6:00 PM</p>
+  </div>
+
+</div>
+
+<!-- Google Maps Section -->
+<div class="map">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15957.168334486936!2d123.347584768266!3d7.841819279912933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32552af85790b3c3%3A0xa8a0125c27a1e7c3!2sZamboanga%20del%20Sur!5e0!3m2!1sen!2sph!4v1614112789035!5m2!1sen!2sph"
+    width="100%"
+    height="100%"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy">
+  </iframe>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <p>&copy; 2025 - Zamboanga del sur Tourist Spots. All Rights Reserved.</p>
+</div>
+
+</body>
+</html>

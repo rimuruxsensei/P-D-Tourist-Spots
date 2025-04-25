@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zamboanga Del Sur Tourist Spots - Login & Register</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<div class="navbar">
+  <a href="homepage.html">Home</a>
+  <a href="beaches.html">Beaches</a>
+  <a href="parks.html">Parks</a>
+  <a href="water-falls.html">Water Falls</a>
+  <a href="contact-us.html">Contact Us</a>
+  <a href="about-us.html">About Us</a>
+</div>
+
+<div class="form-container">
+
+  <!-- Login Form -->
+  <div id="login-form" class="form-box formal-form">
+    <h2>Login</h2>
+
+    <!-- Use GET to avoid 405 error -->
+    <form action="homepage.html" method="GET">
+
+      <div class="form-group">
+        <label for="login-username">Username</label>
+        <input type="text" id="login-username" name="username" placeholder="Enter your username" required>
+      </div>
+
+      <div class="form-group">
+        <label for="login-password">Password</label>
+        <input type="password" id="login-password" name="password" placeholder="Enter your password" required>
+      </div>
+
+      <button type="submit">Login</button>
+
+      <div class="form-footer">
+        <a href="#">Forgot Password?</a>
+        <p>Don't have an account? <a href="#" onclick="showRegister()">Register</a></p>
+      </div>
+
+    </form>
+  </div>
+
+  
+
+
+
+<div class="footer">
+  <p>&copy; 2025 - Zamboanga del sur Tourist Spots. All Rights Reserved.</p>
+</div>
+
+<!-- JavaScript to Toggle Forms -->
+
+
+</body>
+</html>
